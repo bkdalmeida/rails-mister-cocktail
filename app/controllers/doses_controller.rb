@@ -11,7 +11,7 @@ class DosesController < ApplicationController
      if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      render 'cocktail/show'
+      render 'cocktails/show'
     end
    end
 
@@ -26,7 +26,7 @@ class DosesController < ApplicationController
   private
 
   def dose_param
-    params.require(:dose).permit(:ingredient, :description)
+    params.require(:dose).permit(:ingredient_id, :description)
   end
 
 
