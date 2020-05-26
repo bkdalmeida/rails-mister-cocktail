@@ -1,0 +1,8 @@
+
+
+<%= simple_form_for [@cocktail, @dose ] do |f| %>
+  <%= f.association :ingredient %>
+  <%= f.input :description, placeholder: 'How much do you need?' %>
+  <%= f.submit %>
+  <% end %>
+
