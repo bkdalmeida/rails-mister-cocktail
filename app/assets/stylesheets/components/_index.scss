@@ -2,3 +2,13 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 15em;
+  grid-gap: 16px;
+  padding: 12px;
+}
+
+

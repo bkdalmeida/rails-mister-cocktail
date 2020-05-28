@@ -1,8 +1,35 @@
+<h2> <%= @cocktail.name%></h2>
 
 
+<div class="show_body">
+<div>
+ <%= cl_image_tag  @cocktail.photo.attached? ? @cocktail.photo.key : "bar_tpgut3", height: 200, width: 300, crop: :fill%>
+<ul class="list-group">
+  <% @cocktail.doses.each do |dose| %>
+    <li class="list-group-item"> <%= dose.description %> <%=dose.ingredient.name%> </li>
+    <%= link_to "Delete",
+    dose_path(dose),
+    method: :delete,
+    data: "Are you sure you want to delete #{dose} from the cocktail?" %>
+
+  <% end %>
+</ul>
+</div>
 <%= simple_form_for [@cocktail, @dose ] do |f| %>
   <%= f.association :ingredient %>
   <%= f.input :description, placeholder: 'How much do you need?' %>
   <%= f.submit %>
   <% end %>
+
+</div>
+  <%= link_to 'Back', cocktails_path %>
+
+
+
+
+
+
+
+
+
 
