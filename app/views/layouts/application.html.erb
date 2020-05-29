@@ -26,17 +26,19 @@
 
     <div class="container">
       <div class="row">
+
         <nav class="col-lg-3">
-          <div class="row">
-            <%= link_to 'Home', cocktails_path %>
-            <%= link_to 'Add a new cocktail', new_cocktail_path %>
-            <div class="col-lg-4">
+
+            <div><%= link_to 'Home', cocktails_path %></div>
+            <div><%= link_to 'Add a new cocktail', new_cocktail_path %></div>
+
             <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search for a cocktail" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <label for="search"></label><br>
+              <input type="text" id="search" name="search" placeholder="Search for a cocktail"><br>
+              <input type="submit" value="Submit">
             </form>
-            </div>
-          </div>
+
+
         </nav>
 
         <div class="website_body">
@@ -45,7 +47,7 @@
           </div>
         </div>
 
-    </div> <!-- fermeture row -->
+      </div> <!-- fermeture row -->
 
 
 
