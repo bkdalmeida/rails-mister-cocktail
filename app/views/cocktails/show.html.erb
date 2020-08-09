@@ -17,7 +17,7 @@
 </div>
 <%= simple_form_for [@cocktail, @dose ] do |f| %>
   <%= f.association :ingredient %>
-  <%= f.input :description, placeholder: 'How much do you need?' %>
+  <%= f.input :description, placeholder: 'How much ?' %>
   <%= f.submit %>
   <% end %>
 
