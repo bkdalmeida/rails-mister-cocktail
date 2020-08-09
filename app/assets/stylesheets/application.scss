@@ -59,7 +59,13 @@ header{
   padding: 12px;
 }
 
-
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: grey;
+}
 
 h1, h2
 {
